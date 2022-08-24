@@ -1,0 +1,40 @@
+<div>
+    <h3>Add a new playlist</h3>
+
+    <form class="example-form" [formGroup]="formAddPlaylist">
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Nombre de la playlist</mat-label>
+            <input matInput placeholder="Nombre de la playlist" name="name" type="text" required formControlName="name">
+            <mat-error *ngIf="formAddPlaylist.controls['name'].errors?.['required']">
+                Debe indicar el nombre de la playlist
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+
+            <mat-label>Descripcion</mat-label>
+            <input matInput placeholder="Descripcion" name="description" type="text" required
+                formControlName="description">
+            <mat-error *ngIf="formAddPlaylist.controls['description'].errors?.['required']">
+                Debe ingresar una descripcion
+            </mat-error>
+
+        </mat-form-field>
+
+    
+        <div class="example-button-row">
+            <button mat-raised-button (click)="createNewPlaylist(formAddPlaylist)" [disabled]="!formAddPlaylist.valid"
+                type="submit">
+                Agregar
+            </button>
+        </div>
+
+        <div class="example-button-row">
+            <button mat-raised-button (click)="updatePlaylist(formAddPlaylist)"
+                type="submit">
+                Editar
+            </button>
+        </div>
+    </form>
+</div>

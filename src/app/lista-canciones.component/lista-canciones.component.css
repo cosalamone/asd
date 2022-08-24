@@ -1,0 +1,23 @@
+table {
+  width: 80%;
+  float: right;
+  margin-right: 3%;
+  margin-top: 25px;
+  background-color: rgb(46, 41, 46);
+  color:rgb(254, 240, 255)
+
+}
+
+.mat-cell, .mat-footer-cell {
+  color: rgb(254, 240, 255);
+}
+
+.mat-header-cell {
+  color: rgb(254, 240, 255);
+}
+
+.tituloPlaylistAbierta{
+  color: rgb(254, 240, 255);
+  text-align: center;
+  padding-top: 10px;
+}

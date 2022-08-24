@@ -1,0 +1,13 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.navbar{
+  background-color: rgb(46, 41, 46);
+  color:rgb(254, 240, 255)
+}
+
+.title{
+justify-items: center;
+justify-content: center;}
+

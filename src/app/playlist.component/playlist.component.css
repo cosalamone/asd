@@ -1,0 +1,100 @@
+section{
+  display: inline-flex !important;
+  width: 20%;
+  margin-left: 2px;
+}
+
+.mat-list-base .mat-list-option {
+  color: rgb(254, 240, 255);
+}
+
+.example-button-container[_ngcontent-hyd-c116] {
+  display: flex;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.mat-list-base {
+  padding-top: 50px;
+  display: block;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  float: left;
+}
+
+h2{
+  margin: 7px 15px 16px;
+  height: 40px;
+}
+
+div{
+  height: 40px;
+}
+
+.buttonDeletePlaylist{
+  margin-top: 0px;
+  margin-left: 100px !important;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(22, 20, 22); 
+  color:rgb(254, 240, 255);
+  align-items: center;
+}
+
+
+.buttonAddPlaylist{
+  margin-top: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(22, 20, 22); 
+  color:rgb(254, 240, 255)
+}
+
+section {
+  display: table;
+}
+
+.example-label {
+  display: table-cell;
+  font-size: 14px;
+  margin-left: 8px;
+  min-width: 120px;
+}
+
+.example-button-row {
+  display: table-cell;
+  width: 490px;
+}
+
+.example-button-row .mat-button-base {
+  margin: 8px 8px 8px 0;
+}
+
+.example-flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+}
+
+
+.playlistElement{
+  position: absolute;
+  display: grid;
+  margin-top: 50px;
+}
+
+.menu{
+  display: block;
+
+}
+
+
+element.style {
+  display: -webkit-inline-box;
+}

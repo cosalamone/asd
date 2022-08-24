@@ -1,0 +1,47 @@
+<section>
+
+  <h2>
+    Tus playlists
+  </h2>
+
+
+
+
+  <div class="example-button-container element.style">
+    <button type="button" mat-icon-button class="buttonAddPlaylist" aria-label="Example icon button with a home icon">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+
+  <div class="row">
+    <div class="column"></div>
+    <div class="column"></div>
+  </div>
+
+
+  <mat-selection-list #asd [multiple]="false" class="playlistElement">
+    <mat-list-option *ngFor="let list of playlists" [value]="list" (click)="eventOnPlaylist(list)"
+      (click)="sendInfoOfPlaylist(list.name)">
+      {{list.name}}
+
+      <button mat-icon-button [matMenuTriggerFor]="menu" class="menu">
+        <mat-icon>more_horiz</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="deleteThisPlaylist(list)">
+          <span>Delete</span>
+        </button>
+        <button mat-menu-item disabled>
+          <span>Edit</span>
+        </button>
+
+      </mat-menu>
+
+    </mat-list-option>
+
+  </mat-selection-list>
+
+  <p>
+    Descripcion de la playlist: {{asd.selectedOptions.selected[0]?.value.description}}
+  </p>
+</section>

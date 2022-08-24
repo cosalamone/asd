@@ -1,0 +1,41 @@
+<!--
+<div *ngIf="!isLogged">
+    <app-login (userEvent)="login()"></app-login>
+</div>
+
+
+<li *ngIf="isLogged"><button (click)="logout()">Logout</button></li>
+<div *ngIf="isLogged">
+    <navegador-inicio>
+    </navegador-inicio>
+    <mat-drawer-container class="example-container">
+        <mat-drawer mode="side" class="playlistSection" opened>
+            <playlists (playlistClick)="clickedOn($event)" (playlistInfo)="getInfoPlaylist($event)"> </playlists>
+        </mat-drawer>
+        <mat-drawer-content class="songsSection">
+            <lista-canciones [songsData]="songsAImprimir" [playlistData]="currentPlaylist"></lista-canciones>
+        </mat-drawer-content>
+    </mat-drawer-container>
+
+    <add-playlist (playlistEvent)="addPlaylist($event)"></add-playlist>
+</div>
+-->
+
+
+<navegador-inicio>
+</navegador-inicio>
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" class="playlistSection" opened>
+        <playlists (playlistClick)="clickedOn($event)" (playlistInfo)="getInfoPlaylist($event)"> </playlists>
+    </mat-drawer>
+    <mat-drawer-content class="songsSection">
+        <lista-canciones [songsData]="songsAImprimir" [playlistData]="currentPlaylist"></lista-canciones>
+    </mat-drawer-content>
+</mat-drawer-container>
+
+<add-playlist (playlistEvent)="addPlaylist($event)"></add-playlist>
+
+<div>
+    <add-song></add-song>
+</div>
+

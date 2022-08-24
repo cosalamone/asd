@@ -1,0 +1,36 @@
+<navegador-inicio></navegador-inicio>
+<section>
+    <div>
+
+        <form #formLogin="ngForm" [formGroup]="formulario">
+
+            <mat-form-field>
+                <input matInput placeholder="Email" name="email" type="email" required formControlName="email"
+                    #emailInput />
+                <mat-error *ngIf="formulario.controls['email'].errors?.['required']">
+                    Email is required
+                </mat-error>
+                <mat-error *ngIf="formulario.controls['email'].errors?.['pattern']">
+                    Please enter a valid email
+                </mat-error>
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <input matInput placeholder="Contraseña" name="password" type="password" required
+                    formControlName="password" />
+                <mat-error *ngIf="formulario.controls['password'].errors?.['minlength']">
+                    Minimo {{minLengthForPass}} caracteres
+                </mat-error>
+            </mat-form-field>
+
+            <div>
+                <button mat-raised-button (click)="submitLogin(formulario)" [disabled]="!formulario.valid"
+                    type="submit">
+                    Iniciar sesión
+                </button>
+            </div>
+        </form>
+
+    </div>
+
+</section>

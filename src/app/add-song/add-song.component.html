@@ -1,0 +1,61 @@
+<div>
+    <h3>Add a new song</h3>
+
+    <form class="example-form" [formGroup]="formAddSong">
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Playlist</mat-label>
+            <input matInput placeholder="Playlist" name="playlist" type="text" required formControlName="playlist">
+            <mat-error *ngIf="formAddSong.controls['playlist'].errors?.['required']">
+                Debe ingresar el nombre de la playlist
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Canción</mat-label>
+            <input matInput placeholder="Nombre de la Canción" name="name" type="text" required formControlName="name">
+            <mat-error *ngIf="formAddSong.controls['name'].errors?.['required']">
+                Debe ingresar el nombre de la canción
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+
+            <mat-label>Artista</mat-label>
+            <input matInput placeholder="Artista" name="artist" type="text" required formControlName="artist">
+            <mat-error *ngIf="formAddSong.controls['artist'].errors?.['required']">
+                Debe ingresar el artista
+            </mat-error>
+
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+
+            <mat-label>Album</mat-label>
+            <input matInput placeholder="Album" name="album" type="text" required formControlName="album">
+            <mat-error *ngIf="formAddSong.controls['album'].errors?.['required']">
+                Debe ingresar una descripcion
+            </mat-error>
+
+        </mat-form-field>
+
+
+
+
+        <div class="example-button-row">
+            <button mat-raised-button (click)="createNewSong(formAddSong)" [disabled]="!formAddSong.valid"
+                type="submit">
+                Agregar
+            </button>
+        </div>
+
+        <div class="example-button-row">
+            <button mat-raised-button (click)="updateSongDetail(formAddSong)"
+                type="submit">
+                Editar
+            </button>
+        </div>
+
+
+    </form>
+</div>
